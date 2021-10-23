@@ -2,35 +2,47 @@ package statisticker;
 
 import java.util.List;
 
+
+class stats {
+
+  float average;
+  float min;
+  float max;
+
+  stats(final float average, final float min, final float max) {
+    this.average = average;
+    this.min = min;
+    this.max = max;
+  }
+}
+
 public class Statistics 
 {
-    public static Stats getStatistics(float[] numbers) {
-        //implement the computation of statistics here
-        	float sum=0;
-	        float min=numbers[0];
-		float max=numbers[0]; 
-	        float average=0;
-		
-		if(numbers.length != 0){
-		
-		  for(int i=0;i<numbers.length;i++){
-			  sum +=numbers[i];
-			  
-			  if(max > numbers[i]){
-				  max=numbers[i];
-			  }
-			  
-			  if(min < numbers[i]){
-				  min=numbers[i];
-			  }
-		  }
-		  
-		  average=sum/numbers.length;
-		}
-		else{
-			average=NaN;
-			min=NaN;
-			max=NaN;
-		}
+
+  public static stats getStatistics(final List<Float> numberList) {
+    // implement the computation of statistics here
+    float sum = 0;
+    float min = numberList.get(0);
+    float max = numberList.get(0);
+    float average = 0;
+
+    if (numberList.size() != 0) {
+
+      for (int i = 0; i < numberList.size(); i++) {
+        sum += numberList.get(i);
+
+        if (max > numberList.get(i)) {
+          max = numberList.get(i);
+        }
+
+        if (min < numberList.get(i)) {
+          min = numberList.get(i);
+        }
+      }
+
+      average = sum / numberList.size();
     }
+    return new stats(average, min, max);
+  }
+
 }
