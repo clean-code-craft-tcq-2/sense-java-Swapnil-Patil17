@@ -6,10 +6,10 @@ public class Statistics
 {
     public static Stats getStatistics(List<___> numbers) {
         //implement the computation of statistics here
-        public float sum=0;
-		public float min=numbers[0];
-		public float max=numbers[0]; 
-		public float average=0;
+        	float sum=0;
+	        float min=numbers[0];
+		float max=numbers[0]; 
+	        float average=0;
 		
 		if(numbers.length != 0){
 		
