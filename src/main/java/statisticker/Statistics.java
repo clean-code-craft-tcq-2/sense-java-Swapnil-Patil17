@@ -17,11 +17,11 @@ public class Statistics  {
   }
 
   public static Stats getStatistics(final List<Float> numberList) {
-    float sum = 0.0f;
-    float max = numberList.get(0);
-    float min = numberList.get(0);
+    
     if (!numberList.isEmpty()) {
-
+      float sum = 0.0f;
+      float max = numberList.get(0);
+      float min = numberList.get(0);
       for (int i = 0; i < numberList.size(); i++) {
         sum += numberList.get(i);
 
