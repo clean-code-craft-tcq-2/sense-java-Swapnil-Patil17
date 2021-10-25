@@ -30,3 +30,4 @@ public class Statistics  {
     Float average = sum / numbers.size();
     return new Stats(min, max, average);
 }
+}
