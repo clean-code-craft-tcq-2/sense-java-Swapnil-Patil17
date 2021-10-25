@@ -18,23 +18,15 @@ public class Statistics  {
 
   public static Stats getStatistics(final List<Float> numberList) {
     
-    if (!numberList.isEmpty()) {
-      float sum = 0.0f;
-      float max;
-      float min;
-      for (int i = 0; i < numberList.size(); i++) {
-        sum += numberList.get(i);
-      }
-      
-      max = Collections.max(numberList);
-      min = Collections.min(numberList);
-
-      float average = sum / numberList.size();
-      return new Stats(average, min, max);
-    }
-    else{
+   if (numbers.isEmpty()) {
       return new Stats(Float.NaN, Float.NaN, Float.NaN);
     }
-
-  }
+    Float min = Collections.min(numbers);
+    Float max = Collections.max(numbers);
+    Float sum = 0.0f;
+    for (Float number : numbers) {
+      sum += number;
+    }
+    Float average = sum / numbers.size();
+    return new Stats(min, max, average);
 }
