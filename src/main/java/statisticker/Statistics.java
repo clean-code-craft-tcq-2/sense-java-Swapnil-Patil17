@@ -18,16 +18,16 @@ public class Statistics  {
 
   public static Stats getStatistics(final List<Float> numberList) {
     
-   if (numbers.isEmpty()) {
+   if (numberList.isEmpty()) {
       return new Stats(Float.NaN, Float.NaN, Float.NaN);
     }
-    float min = Collections.min(numbers);
-    float max = Collections.max(numbers);
+    float min = Collections.min(numberList);
+    float max = Collections.max(numberList);
     float sum = 0.0f;
-    for (Float number : numbers) {
+    for (Float number : numberList) {
       sum += number;
     }
-    float average = sum / numbers.size();
+    float average = sum / numberList.size();
     return new Stats(min, max, average);
 }
 }
