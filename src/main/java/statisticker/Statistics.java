@@ -24,9 +24,12 @@ public class Statistics  {
     float min = Collections.min(numberList);
     float max = Collections.max(numberList);
     float sum = 0.0f;
-    for (Float number : numberList) {
-      sum += number;
-    }
+    //for (Float number : numberList) {
+     // sum += number;
+    //}
+     for (int i = 0; i < numberList.size(); i++) {
+        sum += numberList.get(i);
+     }
     float average = sum / numberList.size();
     return new Stats(min, max, average);
 }
