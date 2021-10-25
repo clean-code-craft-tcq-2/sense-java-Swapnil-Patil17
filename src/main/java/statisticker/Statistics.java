@@ -20,7 +20,7 @@ public class Statistics  {
     float sum = 0.0f;
     float max = numberList.get(0);
     float min = numberList.get(0);
-    if (numberList.size() != 0) {
+    if (!numberList.isEmpty()) {
 
       for (int i = 0; i < numberList.size(); i++) {
         sum += numberList.get(i);
