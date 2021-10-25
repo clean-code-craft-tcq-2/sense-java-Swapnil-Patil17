@@ -18,6 +18,9 @@ public class Statistics
   }
 
   public static Stats getStatistics(final List<Float> numberList) {
+	Float sum = 0.0f;
+ 	Float max = numberset[0];
+ 	Float min = numberset[0];
     if (numberList.size() != 0) {
 
       for (int i = 0; i < numberList.size(); i++) {
