@@ -3,7 +3,7 @@ package statisticker;
 import java.util.Collections;
 import java.util.List;
 
-public class statistics {
+public class Statistics  {
 
   public static class Stats {
 
