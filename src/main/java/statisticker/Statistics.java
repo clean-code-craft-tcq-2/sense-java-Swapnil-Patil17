@@ -3,7 +3,11 @@ package statisticker;
 import java.util.List;
 
 
-static class stats {
+
+
+public class Statistics 
+{
+ class stats {
 
   float average;
   float min;
@@ -15,9 +19,6 @@ static class stats {
     this.max = max;
   }
 }
-
-public class Statistics 
-{
 
   public static stats getStatistics(final List<Float> numberList) {
     float sum = 0;
