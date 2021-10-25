@@ -3,13 +3,13 @@ package statisticker;
 import java.util.List;
 
 
-class stats {
+public static class stats {
 
   float average;
   float min;
   float max;
 
-  stats(final float average, final float min, final float max) {
+  public stats(final float average, final float min, final float max) {
     this.average = average;
     this.min = min;
     this.max = max;
@@ -20,7 +20,6 @@ public class Statistics
 {
 
   public static stats getStatistics(final List<Float> numberList) {
-    // implement the computation of statistics here
     float sum = 0;
     float min = numberList.get(0);
     float max = numberList.get(0);
@@ -41,8 +40,12 @@ public class Statistics
       }
 
       average = sum / numberList.size();
+	  return new stats(average, min, max);
     }
-    return new stats(average, min, max);
+	else{
+		return new stats(Float.NaN, Float.NaN, Float.NaN);
+	}
+    
   }
 
 }
