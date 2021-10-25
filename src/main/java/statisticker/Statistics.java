@@ -3,7 +3,7 @@ package statisticker;
 import java.util.List;
 
 
-public static class stats {
+static class stats {
 
   float average;
   float min;
