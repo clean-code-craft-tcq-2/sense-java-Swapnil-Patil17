@@ -21,13 +21,13 @@ public class Statistics  {
    if (numbers.isEmpty()) {
       return new Stats(Float.NaN, Float.NaN, Float.NaN);
     }
-    Float min = Collections.min(numbers);
-    Float max = Collections.max(numbers);
-    Float sum = 0.0f;
+    float min = Collections.min(numbers);
+    float max = Collections.max(numbers);
+    float sum = 0.0f;
     for (Float number : numbers) {
       sum += number;
     }
-    Float average = sum / numbers.size();
+    float average = sum / numbers.size();
     return new Stats(min, max, average);
 }
 }
