@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Statistics 
 {
- class stats {
+public static class stats {
 
   float average;
   float min;
