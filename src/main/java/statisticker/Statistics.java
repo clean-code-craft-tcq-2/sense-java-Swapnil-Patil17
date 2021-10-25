@@ -18,9 +18,9 @@ public class Statistics
   }
 
   public static Stats getStatistics(final List<Float> numberList) {
-	Float sum = 0.0f;
- 	Float max = numberset[0];
- 	Float min = numberset[0];
+	Float sum;
+ 	Float max = numberList.get(0);
+ 	Float min = numberList.get(0);
     if (numberList.size() != 0) {
 
       for (int i = 0; i < numberList.size(); i++) {
@@ -35,7 +35,7 @@ public class Statistics
         }
       }
 
-      average = sum / numberList.size();
+      Float average = sum / numberList.size();
 	  return new stats(average, min, max);
     }
 	else{
